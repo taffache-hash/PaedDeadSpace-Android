@@ -1,0 +1,5 @@
+* text=auto
+
+# These files are verified byte-for-byte against the published Core release.
+app/src/main/python/paeddeadspace/*.py text eol=lf
+provenance/core-v1.0.0/MANIFEST_SHA256.txt text eol=lf
