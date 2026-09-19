@@ -1,7 +1,8 @@
 # PaedDeadSpace Android privacy policy
 
-**Applies to:** PaedDeadSpace Android version 1  
-**Status:** pre-release source; publication date and public policy URL will be added before Google Play submission.
+**Applies to:** PaedDeadSpace Android version 1.0.1
+**Effective date:** 20 September 2026
+**Public policy URL:** `https://taffache-hash.github.io/PaedDeadSpace-Android/`
 
 ## Data practices
 
@@ -28,6 +29,6 @@ The app is intended for healthcare professionals as educational and research sof
 
 ## Google Play publication
 
-Before Google Play submission, this policy will be published on a publicly accessible, non-editable web page. A PDF will not be used as the Google Play privacy-policy URL. The published page will identify an effective date and a contact route for privacy questions.
+This policy is published on a publicly accessible, non-editable web page. A PDF is not used as the Google Play privacy-policy URL. For privacy questions, contact <taffache@gmail.com>.
 
 This source file will remain aligned with the in-app disclosure, Google Play Data safety answers, and Health apps declaration for the exact released version.
