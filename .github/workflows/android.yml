@@ -36,7 +36,7 @@ jobs:
       - name: Verify frozen Python Core and bridge
         run: |
           python -m pip install pytest==8.4.2
-          python -m pytest -q scripts/test_verify_core_bundle.py scripts/test_write_manifest_sha256.py
+          python -m pytest -q scripts/test_verify_core_bundle.py scripts/test_write_manifest_sha256.py scripts/test_release_version_contract.py
           python -m unittest scripts.test_core_bundle_source scripts.test_android_bridge
 
       - name: Verify Android project
