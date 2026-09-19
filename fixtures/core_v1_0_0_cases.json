@@ -1,0 +1,116 @@
+{
+  "core_release": {
+    "package_version": "1.0.0",
+    "git_tag": "v1.0.0",
+    "release_doi": "10.5281/zenodo.22838225"
+  },
+  "cases": [
+    {
+      "id": "pearsall_10kg_30ml",
+      "request": {
+        "weight_kg": 10.0,
+        "age_value": 2.0,
+        "age_unit": "YEARS",
+        "tidal_volume_ml_kg": 8.0,
+        "respiratory_rate_bpm": 20.0,
+        "model": "PEARSALL_BENCHMARK",
+        "patient_vd_vt": null,
+        "apparatus_dead_space_ml": 30.0,
+        "apparatus_name": "User-entered apparatus",
+        "apparatus_qualification": "USER_ESTIMATE"
+      },
+      "expected": {
+        "status": "success",
+        "vt_ml": 80.0,
+        "patient_vd_ml": 24.0,
+        "apparatus_vd_ml": 30.0,
+        "total_vd_ml": 54.0,
+        "alveolar_ve_ml_min": 520.0,
+        "rr_required_bpm": 43.07692307692308,
+        "core_version": "1.0.0"
+      }
+    },
+    {
+      "id": "numa_fletcher_warning",
+      "request": {
+        "weight_kg": 10.0,
+        "age_value": 0.0,
+        "age_unit": "DAYS",
+        "tidal_volume_ml_kg": 8.0,
+        "respiratory_rate_bpm": 20.0,
+        "model": "NUMA_FLETCHER_REFERENCE",
+        "patient_vd_vt": null,
+        "apparatus_dead_space_ml": 0.0,
+        "apparatus_name": "User-entered apparatus",
+        "apparatus_qualification": "USER_ESTIMATE"
+      },
+      "expected": {
+        "status": "success",
+        "warning_contains": "Numa intrathoracic component",
+        "core_version": "1.0.0"
+      }
+    },
+    {
+      "id": "user_defined_zero_apparatus",
+      "request": {
+        "weight_kg": 10.0,
+        "age_value": 2.0,
+        "age_unit": "YEARS",
+        "tidal_volume_ml_kg": 8.0,
+        "respiratory_rate_bpm": 20.0,
+        "model": "USER_DEFINED",
+        "patient_vd_vt": 0.3,
+        "apparatus_dead_space_ml": 0.0,
+        "apparatus_name": "User-entered apparatus",
+        "apparatus_qualification": "USER_ESTIMATE"
+      },
+      "expected": {
+        "status": "success",
+        "apparatus_vd_ml": 0.0,
+        "relative_co2_burden": 1.0,
+        "core_version": "1.0.0"
+      }
+    },
+    {
+      "id": "invalid_negative_weight",
+      "request": {
+        "weight_kg": -1.0,
+        "age_value": 2.0,
+        "age_unit": "YEARS",
+        "tidal_volume_ml_kg": 8.0,
+        "respiratory_rate_bpm": 20.0,
+        "model": "PEARSALL_BENCHMARK",
+        "patient_vd_vt": null,
+        "apparatus_dead_space_ml": 30.0,
+        "apparatus_name": "User-entered apparatus",
+        "apparatus_qualification": "USER_ESTIMATE"
+      },
+      "expected": {
+        "status": "input_error",
+        "message_contains": "weight_kg"
+      }
+    },
+    {
+      "id": "model_breakdown_vd_ge_vt",
+      "request": {
+        "weight_kg": 10.0,
+        "age_value": 2.0,
+        "age_unit": "YEARS",
+        "tidal_volume_ml_kg": 8.0,
+        "respiratory_rate_bpm": 20.0,
+        "model": "USER_DEFINED",
+        "patient_vd_vt": 0.3,
+        "apparatus_dead_space_ml": 60.0,
+        "apparatus_name": "User-entered apparatus",
+        "apparatus_qualification": "USER_ESTIMATE"
+      },
+      "expected": {
+        "status": "model_breakdown",
+        "vt_ml": 80.0,
+        "total_vd_ml": 84.0,
+        "rr_required_bpm": null,
+        "core_version": "1.0.0"
+      }
+    }
+  ]
+}
