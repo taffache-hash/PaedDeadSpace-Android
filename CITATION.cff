@@ -8,7 +8,7 @@ authors:
     orcid: "https://orcid.org/0009-0002-8806-9733"
     affiliation: "General and Pediatric Anesthesia and Intensive Care Unit, IRCCS AOU Bologna – Policlinico Sant’Orsola-Malpighi, Bologna, Italy"
     email: "taffache@gmail.com"
-version: "1.0.0"
+version: "1.0.1"
 license: MIT
 repository-code: "https://github.com/taffache-hash/PaedDeadSpace-Android"
 abstract: "Offline educational and research Android application for healthcare professionals that presents the frozen PaedDeadSpace-Core v1.0.0 apparatus dead-space model without patient-specific clinical recommendations."

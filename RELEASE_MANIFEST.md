@@ -4,11 +4,11 @@
 
 - Product: PaedDeadSpace Android
 - Android package: `org.paeddeadspace.android`
-- Current app version: `1.0.0` (`versionCode` 1)
+- Current app version: `1.0.1` (`versionCode` 2)
 - Embedded scientific package: PaedDeadSpace-Core `1.0.0`
 - Core tag: `v1.0.0`
 - Core release DOI: <https://doi.org/10.5281/zenodo.22838225>
-- Android release status: GitHub source release v1.0.0; Android DOI not yet assigned
+- Android release status: GitHub source release v1.0.1 pending; Android DOI not yet assigned
 - Release AAB status: unsigned; not authorized for production upload
 
 ## Files included in the SHA-256 release manifest

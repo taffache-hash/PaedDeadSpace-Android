@@ -6,6 +6,13 @@ All notable changes to PaedDeadSpace Android will be documented in this file.
 
 No user-visible changes yet.
 
+## [1.0.1] - 2026-09-19
+
+### Changed
+
+- Technical release patch created after Zenodo GitHub preservation was enabled.
+- Android application version advanced to `1.0.1` (`versionCode` 2); PaedDeadSpace-Core remains frozen at `1.0.0` with no scientific or intended-use changes.
+
 ## [1.0.0] - 2026-09-19
 
 ### Added

@@ -25,6 +25,6 @@ class AppLaunchTest {
         val context = InstrumentationRegistry.getInstrumentation().targetContext
         val packageInfo = context.packageManager.getPackageInfo(context.packageName, 0)
 
-        assertEquals("1.0.0", packageInfo.versionName)
+        assertEquals("1.0.1", packageInfo.versionName)
     }
 }
