@@ -28,6 +28,7 @@ fun NoticeScreen(onContinue: () -> Unit) {
         )
         Text(stringResource(R.string.professional_nonclinical_notice))
         Text(stringResource(R.string.no_identifiers_notice))
+        Text(stringResource(R.string.privacy_summary))
         Button(onClick = onContinue) {
             Text(stringResource(R.string.continue_action))
         }

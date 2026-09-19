@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+message: "If you use this Android application in scholarly work, please cite the archived Android release and the embedded PaedDeadSpace-Core release."
+title: "PaedDeadSpace Android"
+type: software
+authors:
+  - family-names: Taffache
+    given-names: Paolo
+    orcid: "https://orcid.org/0009-0002-8806-9733"
+    affiliation: "General and Pediatric Anesthesia and Intensive Care Unit, IRCCS AOU Bologna – Policlinico Sant’Orsola-Malpighi, Bologna, Italy"
+    email: "taffache@gmail.com"
+version: "1.0.0-dev"
+license: MIT
+repository-code: "https://github.com/taffache-hash/PaedDeadSpace-Android"
+abstract: "Offline educational and research Android application for healthcare professionals that presents the frozen PaedDeadSpace-Core v1.0.0 apparatus dead-space model without patient-specific clinical recommendations."
+keywords:
+  - "pediatric anesthesia"
+  - "pediatric intensive care"
+  - "mechanical ventilation"
+  - "apparatus dead space"
+  - "medical education"
+  - "Android"
+references:
+  - type: software
+    title: "PaedDeadSpace: Pediatric Apparatus Dead-Space Explorer — Core"
+    version: "1.0.0"
+    doi: "10.5281/zenodo.22838225"
+    repository-code: "https://github.com/taffache-hash/PaedDeadSpace-Core"

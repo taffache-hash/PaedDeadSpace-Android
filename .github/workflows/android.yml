@@ -1,0 +1,57 @@
+name: Android verification
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+    tags: ["android-v*"]
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.13"
+
+      - uses: android-actions/setup-android@v3
+
+      - name: Install pinned Android SDK components
+        run: sdkmanager "platform-tools" "platforms;android-36" "platforms;android-37" "build-tools;36.0.0"
+
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-home-cache-cleanup: true
+
+      - name: Verify frozen Python Core and bridge
+        run: |
+          python -m pip install pytest==8.4.2
+          python -m pytest -q scripts/test_verify_core_bundle.py scripts/test_write_manifest_sha256.py
+          python -m unittest scripts.test_core_bundle_source scripts.test_android_bridge
+
+      - name: Verify Android project
+        run: |
+          chmod +x gradlew
+          ./gradlew testDebugUnitTest lintDebug assembleRelease
+
+      - name: Build unsigned release bundle on protected release tags
+        if: startsWith(github.ref, 'refs/tags/android-v')
+        run: ./gradlew bundleRelease
+
+      - name: Upload unsigned release bundle
+        if: startsWith(github.ref, 'refs/tags/android-v')
+        uses: actions/upload-artifact@v4
+        with:
+          name: paeddeadspace-android-unsigned-aab
+          path: app/build/outputs/bundle/release/app-release.aab
+          if-no-files-found: error
