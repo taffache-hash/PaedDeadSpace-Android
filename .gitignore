@@ -1,0 +1,14 @@
+.gradle/
+.idea/
+.superpowers/
+**/build/
+local.properties
+*.jks
+*.keystore
+keystore.properties
+captures/
+externalNativeBuild/
+.cxx/
+__pycache__/
+*.pyc
+
