@@ -4,6 +4,10 @@ All notable changes to PaedDeadSpace Android will be documented in this file.
 
 ## [Unreleased]
 
+No user-visible changes yet.
+
+## [1.0.0] - 2026-09-19
+
 ### Added
 
 - Native Android workflow for educational and research use by healthcare professionals.
@@ -13,6 +17,6 @@ All notable changes to PaedDeadSpace Android will be documented in this file.
 - In-memory-only state, no accounts, analytics, telemetry, network access, storage, sharing, or export.
 - Automated Core-integrity, bridge-equivalence, Kotlin unit, Compose UI, lint, and release-build checks.
 
-### Release gate
+### Distribution boundary
 
-The public `1.0.0` entry will be created only after the final GitHub release, Zenodo archive, DOI linkage, manuscript update, signing review, and Google Play declarations are complete.
+This source release and its unsigned bundle precede the Zenodo archive, manuscript update, Play signing, policy declarations, internal testing, and any production distribution.

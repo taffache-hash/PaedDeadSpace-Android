@@ -18,6 +18,6 @@ The app invokes the bundled, byte-verified `PaedDeadSpace-Core v1.0.0`; Kotlin a
 - release DOI: <https://doi.org/10.5281/zenodo.22838225>
 - concept DOI: <https://doi.org/10.5281/zenodo.22838224>
 
-## Development status
+## Release status
 
-This repository is under pre-release verification. Debug builds and unsigned release artifacts are not public clinical products and are not ready for Google Play production distribution.
+Version 1.0.0 is the reviewed Android source release. Debug builds and unsigned release artifacts are not clinical products and are not ready for Google Play production distribution. The controlled next steps are Zenodo archival, manuscript update, signing review, Play declarations, and internal testing.
