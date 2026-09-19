@@ -52,6 +52,7 @@
     <string name="details_and_provenance">Details and provenance</string>
     <string name="model_status">Model status: educational and research software; not clinical decision support.</string>
     <string name="details_nonclinical_scope">Outputs describe a mathematical scenario and do not recommend patient-specific settings, diagnosis, or treatment.</string>
+    <string name="privacy_summary">Version 1 does not collect, store, transmit, share, or sell personal data and requests no runtime permissions.</string>
     <string name="core_version_value">Embedded Core version: %1$s</string>
     <string name="github_value">Core repository: %1$s</string>
     <string name="release_doi_value">Core release DOI: %1$s</string>

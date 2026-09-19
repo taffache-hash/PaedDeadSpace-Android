@@ -23,6 +23,7 @@ fun DetailsScreen(metadata: CoreReleaseMetadata?) {
         HorizontalDivider()
         Text(stringResource(R.string.model_status))
         Text(stringResource(R.string.details_nonclinical_scope))
+        Text(stringResource(R.string.privacy_summary))
         if (metadata != null) {
             Text(stringResource(R.string.core_version_value, metadata.packageVersion))
             Text(stringResource(R.string.github_value, metadata.repository))
