@@ -1,6 +1,11 @@
 package org.paeddeadspace.android.ui
 
 import androidx.compose.material3.MaterialTheme
+import androidx.compose.foundation.layout.Box
+import androidx.compose.foundation.layout.height
+import androidx.compose.runtime.CompositionLocalProvider
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.test.SemanticsMatcher
 import androidx.compose.ui.test.assert
 import androidx.compose.ui.test.junit4.createComposeRule
@@ -10,8 +15,11 @@ import androidx.compose.ui.test.performClick
 import androidx.compose.ui.test.performScrollTo
 import androidx.compose.ui.test.performTextInput
 import androidx.compose.ui.text.AnnotatedString
+import androidx.compose.ui.unit.Density
+import androidx.compose.ui.unit.dp
 import androidx.compose.ui.semantics.SemanticsProperties
 import org.junit.Rule
+import org.junit.Assert.assertTrue
 import org.junit.Test
 import org.paeddeadspace.android.core.CalculationRequest
 import org.paeddeadspace.android.core.CoreGateway
@@ -48,6 +56,23 @@ class ScenarioFlowTest {
                 AnnotatedString(""),
             ),
         )
+    }
+
+    @Test
+    fun noticeContinueRemainsReachableAtLargeFontOnSmallScreen() {
+        var continued = false
+        rule.setContent {
+            CompositionLocalProvider(LocalDensity provides Density(1f, 2f)) {
+                MaterialTheme {
+                    Box(Modifier.height(360.dp)) {
+                        NoticeScreen { continued = true }
+                    }
+                }
+            }
+        }
+
+        rule.onNodeWithText("Continue").performScrollTo().performClick()
+        rule.runOnIdle { assertTrue(continued) }
     }
 
     private fun setApp(response: CoreResponse) {

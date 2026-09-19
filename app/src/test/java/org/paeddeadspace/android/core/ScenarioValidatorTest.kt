@@ -57,4 +57,22 @@ class ScenarioValidatorTest {
 
         assertEquals(DraftValidationError.InvalidPatientVdVt, result.error)
     }
+
+    @Test
+    fun commaDecimalProducedByLocalizedKeyboardIsAccepted() {
+        val result = ScenarioValidator.toRequest(
+            ScenarioDraft.valid().copy(
+                weightKg = "10,5",
+                ageValue = "2,5",
+                tidalVolumeMlKg = "7,5",
+                respiratoryRateBpm = "19,5",
+                apparatusDeadSpaceMl = "12,5",
+            ),
+        )
+
+        assertTrue(result.errors.isEmpty())
+        assertEquals(10.5, result.request?.weightKg ?: Double.NaN, 0.0)
+        assertEquals(7.5, result.request?.tidalVolumeMlKg ?: Double.NaN, 0.0)
+        assertEquals(12.5, result.request?.apparatusDeadSpaceMl ?: Double.NaN, 0.0)
+    }
 }

@@ -235,12 +235,8 @@ def compute_case(request_json: str) -> str:
                 "alveolar_vt_ml": current.alveolar_vt_ml,
                 "alveolar_ve_ml_min": current.alveolar_ve_ml_min,
                 "baseline_alveolar_ve_ml_min": baseline.alveolar_ve_ml_min,
-                "current_to_baseline_alveolar_ve_ratio": (
-                    current.alveolar_ve_ml_min / baseline.alveolar_ve_ml_min
-                ),
                 "relative_co2_burden": relative_co2_burden,
                 "rr_required_bpm": rr_required_bpm,
-                "rr_multiplier": rr_required_bpm / inputs.rr_bpm,
                 "apparatus_dead_space_percent_vt": (
                     current.apparatus_dead_space_percent_vt
                 ),

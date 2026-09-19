@@ -6,7 +6,7 @@
 
 **Architecture:** A Kotlin/Jetpack Compose application owns UI state and rendering. It bundles the unmodified PaedDeadSpace-Core v1.0.0 Python source and invokes a single JSON bridge with Chaquopy; Kotlin never reimplements scientific equations. A typed Android gateway turns bridge responses into explicit success, input-error, and model-boundary UI states.
 
-**Tech Stack:** Kotlin 2.2.10, Android Gradle Plugin 9.2.0, Gradle 9.4.1, JDK 17, Jetpack Compose BOM 2026.09.00, Chaquopy 17.0.0, Python 3.13, Android minSdk 24, compileSdk/targetSdk 37, JUnit, Compose UI tests, Android instrumented tests, GitHub Actions.
+**Tech Stack:** Kotlin 2.2.10, Android Gradle Plugin 9.2.0, Gradle 9.4.1, JDK 17, Jetpack Compose BOM 2026.09.00, Chaquopy 17.0.0, Python 3.13, Android minSdk 24, compileSdk 37, targetSdk 36, JUnit, Compose UI tests, Android instrumented tests, GitHub Actions. API 37 is used only for compilation compatibility with the selected Compose stack; targetSdk 36 deliberately follows the current Google Play requirement without opting into target-37 runtime behavior.
 
 **Spec:** `docs/superpowers/specs/2026-09-19-paeddeadspace-android-design.md`
 
@@ -122,7 +122,7 @@ Expected: build failure because `MainActivity` and the app module do not yet exi
 
 - [ ] **Step 4: Add pinned Gradle configuration and a minimal Compose root**
 
-Configure the root build with Android application plugin `9.2.0`, Kotlin Android plugin `2.2.10`, and `com.chaquo.python` plugin `17.0.0`. Configure `app` with `compileSdk = 37`, `targetSdk = 37`, `minSdk = 24`, Java/Kotlin target 17, Compose BOM `2026.09.00`, and Python version `3.13`.
+Configure the root build with Android application plugin `9.2.0`, Kotlin Android plugin `2.2.10`, and `com.chaquo.python` plugin `17.0.0`. Configure `app` with `compileSdk = 37`, `targetSdk = 36`, `minSdk = 24`, Java/Kotlin target 17, Compose BOM `2026.09.00`, and Python version `3.13`.
 
 Use this manifest shape, deliberately with no `<uses-permission>` element:
 

@@ -4,7 +4,7 @@ on:
   pull_request:
   push:
     branches: [main]
-    tags: ["android-v*"]
+    tags: ["v*"]
 
 permissions:
   contents: read
@@ -45,13 +45,21 @@ jobs:
           ./gradlew testDebugUnitTest lintDebug assembleRelease
 
       - name: Build unsigned release bundle on protected release tags
-        if: startsWith(github.ref, 'refs/tags/android-v')
+        if: startsWith(github.ref, 'refs/tags/v')
         run: ./gradlew bundleRelease
 
+      - name: Generate and verify checksum record for exact tag artifact
+        if: startsWith(github.ref, 'refs/tags/v')
+        run: |
+          python scripts/write_manifest_sha256.py
+          python scripts/write_manifest_sha256.py --check
+
       - name: Upload unsigned release bundle
-        if: startsWith(github.ref, 'refs/tags/android-v')
+        if: startsWith(github.ref, 'refs/tags/v')
         uses: actions/upload-artifact@v4
         with:
           name: paeddeadspace-android-unsigned-aab
-          path: app/build/outputs/bundle/release/app-release.aab
+          path: |
+            app/build/outputs/bundle/release/app-release.aab
+            MANIFEST_SHA256.txt
           if-no-files-found: error

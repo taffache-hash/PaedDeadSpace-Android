@@ -113,6 +113,13 @@ object ScenarioValidator {
         return value
     }
 
-    private fun String.finiteDoubleOrNull(): Double? =
-        toDoubleOrNull()?.takeIf(Double::isFinite)
+    private fun String.finiteDoubleOrNull(): Double? {
+        val trimmed = trim()
+        val normalized = if (',' in trimmed && '.' !in trimmed) {
+            trimmed.replace(',', '.')
+        } else {
+            trimmed
+        }
+        return normalized.toDoubleOrNull()?.takeIf(Double::isFinite)
+    }
 }

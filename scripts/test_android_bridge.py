@@ -43,6 +43,8 @@ class AndroidBridgeTest(unittest.TestCase):
         self.assertAlmostEqual(520.0, result["alveolar_ve_ml_min"])
         self.assertAlmostEqual(43.0769230769, result["rr_required_bpm"])
         self.assertEqual("1.0.0", result["core_version"])
+        self.assertNotIn("current_to_baseline_alveolar_ve_ratio", result)
+        self.assertNotIn("rr_multiplier", result)
 
     def test_numa_warning_is_returned_once(self) -> None:
         response = self.compute(

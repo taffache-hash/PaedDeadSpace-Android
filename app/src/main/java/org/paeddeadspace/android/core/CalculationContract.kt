@@ -59,11 +59,8 @@ data class CalculationResult(
     @SerialName("alveolar_vt_ml") val alveolarVtMl: Double,
     @SerialName("alveolar_ve_ml_min") val alveolarVeMlMin: Double,
     @SerialName("baseline_alveolar_ve_ml_min") val baselineAlveolarVeMlMin: Double,
-    @SerialName("current_to_baseline_alveolar_ve_ratio")
-    val currentToBaselineAlveolarVeRatio: Double,
     @SerialName("relative_co2_burden") val relativeCo2Burden: Double,
     @SerialName("rr_required_bpm") val rrRequiredBpm: Double,
-    @SerialName("rr_multiplier") val rrMultiplier: Double,
     @SerialName("apparatus_dead_space_percent_vt")
     val apparatusDeadSpacePercentVt: Double,
     @SerialName("vt_to_apparatus_dead_space_ratio")
