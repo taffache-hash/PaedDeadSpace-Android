@@ -12,3 +12,4 @@ externalNativeBuild/
 __pycache__/
 .pytest_cache/
 *.pyc
+MANIFEST_SHA256.txt

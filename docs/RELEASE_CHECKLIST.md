@@ -23,7 +23,7 @@ This checklist is a human-controlled gate. Completing a build does not authorize
 
 - [ ] Replace the development version with the approved Android release version and monotonically increasing version code.
 - [ ] Confirm `core_release.json`, in-app Details, README, CITATION, changelog, and release notes identify the same Core v1.0.0 release and DOI.
-- [ ] Build the final unsigned AAB from a clean commit and regenerate `MANIFEST_SHA256.txt`.
+- [ ] Build the final unsigned AAB from a clean commit and regenerate the untracked `MANIFEST_SHA256.txt` for attachment to that exact artifact.
 - [ ] Verify the checksum manifest with `python scripts/write_manifest_sha256.py --check`.
 - [ ] Record the final commit SHA, build environment, build date, AAB SHA-256, and test evidence in the GitHub release.
 

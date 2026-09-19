@@ -66,7 +66,7 @@ PaedDeadSpace-Android/
   CITATION.cff                                           # Android component citation metadata
   CHANGELOG.md                                           # user-facing release history
   RELEASE_MANIFEST.md                                    # immutable dependency/version linkage
-  MANIFEST_SHA256.txt                                    # generated release integrity record
+  MANIFEST_SHA256.txt                                    # generated, untracked release integrity record
   .github/workflows/android.yml                          # build and test CI
   settings.gradle.kts, build.gradle.kts, gradle/libs.versions.toml
 ```
