@@ -1,6 +1,8 @@
 # Google Play listing and declaration draft
 
-This is a pre-release drafting source, not a submitted declaration. Recheck every field against the final AAB and current Google Play policy immediately before submission.
+**Publication update (14 October 2026):** PaedDeadSpace Android is [available on Google Play](https://play.google.com/store/apps/details?id=org.paeddeadspace.android).
+
+This document is preserved as a historical pre-publication draft, not a representation of the current live Google Play listing or submitted Play Console declarations. Items below that were marked as pending are not claims about the app's present publication status.
 
 ## Main store listing — English
 
@@ -33,9 +35,9 @@ Scientific provenance, the embedded Core version, GitHub source, and DOI are ava
 - Medical-device status: not a medical device, based on the frozen educational, descriptive, non-prescriptive intended purpose; re-evaluate if features or claims change.
 - Data safety: expected final answer is no data collected and no data shared; verify against the exact dependencies and final AAB.
 - Sensitive permissions: none expected. AndroidX may declare an app-scoped signature permission for internal receiver protection; it is not a runtime or sensitive-data permission.
-- Privacy-policy URL: **TBD — required before any Play testing or production submission.** Must be active, public, non-geofenced, non-editable, and not a PDF.
+- Privacy-policy URL recorded in repository documentation: <https://taffache-hash.github.io/PaedDeadSpace-Android/>. Verify against the URL currently registered in Play Console.
 
-## Visual assets still requiring human approval
+## Historical visual asset preparation notes
 
 - 512 x 512 final high-resolution launcher icon matching the packaged icon.
 - 1,024 x 500 feature graphic without efficacy, safety, ranking, or promotional claims.
