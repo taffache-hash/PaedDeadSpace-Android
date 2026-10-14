@@ -24,4 +24,4 @@ The app invokes the bundled, byte-verified `PaedDeadSpace-Core v1.0.0`; Kotlin a
 
 PaedDeadSpace Android is available on Google Play (publication status updated 14 October 2026). [Open the Google Play listing](https://play.google.com/store/apps/details?id=org.paeddeadspace.android).
 
-The checked-in Android source currently declares version `1.0.1` (`versionCode` 2) and uses the frozen PaedDeadSpace-Core `v1.0.0`. This repository documents source code and release-preparation material; debug builds and unsigned bundles are not the signed version delivered through Google Play. This documentation update does not alter any app code, scientific calculations, or intended-use boundaries.
+Version 1.0.1 is the reviewed Android source release. The checked-in Android source currently declares version `1.0.1` (`versionCode` 2) and uses the frozen PaedDeadSpace-Core `v1.0.0`. This repository documents source code and release-preparation material; debug builds and unsigned bundles are not the signed version delivered through Google Play. This documentation update does not alter any app code, scientific calculations, or intended-use boundaries.
