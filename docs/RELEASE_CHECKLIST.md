@@ -1,5 +1,7 @@
 # Android release checklist
 
+**Publication update (14 October 2026):** PaedDeadSpace Android is [available on Google Play](https://play.google.com/store/apps/details?id=org.paeddeadspace.android). This checklist is retained as the pre-publication quality-control plan. Unchecked items are not evidence that the app remains unpublished, nor do they certify the production release retrospectively.
+
 This checklist is a human-controlled gate. Completing a build does not authorize publication, signing, account access, or regulatory claims.
 
 ## 1. Scientific and functional verification
