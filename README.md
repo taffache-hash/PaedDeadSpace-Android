@@ -1,5 +1,7 @@
 # PaedDeadSpace Android
 
+**Available on Google Play:** [Download PaedDeadSpace for Android](https://play.google.com/store/apps/details?id=org.paeddeadspace.android).
+
 PaedDeadSpace Android is an offline educational and research application for healthcare professionals. It supports reproducible exploration of predefined apparatus dead-space scenarios using the frozen `PaedDeadSpace-Core v1.0.0` scientific package.
 
 The app does not diagnose or treat any condition, recommend ventilator settings, or provide patient-specific clinical decision support. Its outputs describe a mathematical model and are not clinical recommendations. Apparatus dead space is represented separately from patient dead space.
@@ -20,4 +22,6 @@ The app invokes the bundled, byte-verified `PaedDeadSpace-Core v1.0.0`; Kotlin a
 
 ## Release status
 
-Version 1.0.1 is the reviewed Android source release. It is a technical release patch that preserves the frozen PaedDeadSpace-Core v1.0.0 and all educational/research boundaries. Debug builds and unsigned release artifacts are not clinical products and are not ready for Google Play production distribution. The controlled next steps are Zenodo archival, manuscript update, signing review, Play declarations, and internal testing.
+PaedDeadSpace Android is available on Google Play (publication status updated 14 October 2026). [Open the Google Play listing](https://play.google.com/store/apps/details?id=org.paeddeadspace.android).
+
+The checked-in Android source currently declares version `1.0.1` (`versionCode` 2) and uses the frozen PaedDeadSpace-Core `v1.0.0`. This repository documents source code and release-preparation material; debug builds and unsigned bundles are not the signed version delivered through Google Play. This documentation update does not alter any app code, scientific calculations, or intended-use boundaries.
