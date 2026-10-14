@@ -11,6 +11,12 @@
 - Android release status: GitHub source release v1.0.1 pending; Android DOI not yet assigned
 - Release AAB status: unsigned; not authorized for production upload
 
+## Google Play publication — documentation update (14 October 2026)
+
+The PaedDeadSpace Android app is now publicly available on [Google Play](https://play.google.com/store/apps/details?id=org.paeddeadspace.android).
+
+The candidate identity and unsigned AAB status above are retained as records of the original source-release preparation; they do not describe the current Play-distributed signed artifact. No binary or source code was changed in this documentation update.
+
 ## Files included in the SHA-256 release manifest
 
 The block below is machine-read by `scripts/write_manifest_sha256.py`. Local caches, build intermediates other than the selected AAB, keystores, passwords, tokens, and Play credentials are excluded.
