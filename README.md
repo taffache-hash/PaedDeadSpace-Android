@@ -26,4 +26,8 @@ PaedDeadSpace Android is available on Google Play (publication status updated 14
 
 Version 1.0.1 is the reviewed Android source release. It is the tagged [Android source release](https://github.com/taffache-hash/PaedDeadSpace-Android/releases/tag/v1.0.1). The checked-in Android source declares version `1.0.1` (`versionCode` 2) and embeds the frozen PaedDeadSpace-Core `v1.0.0`. The unsigned GitHub Android App Bundle is **not** the signed production artifact distributed by Google Play; repository tags and source releases remain unchanged by this documentation update.
 
-The Android archive has manuscript-listed Zenodo identifiers, but the version-versus-concept DOI labels disagree with the text of the GitHub v1.0.1 release notes. Please consult the authoritative Zenodo record before citing a specific Android archive DOI. This statement does not affect the independently cited Core release DOI above, and does not imply clinical validation or medical-device certification.
+## Zenodo archive and citation
+
+The Zenodo GitHub integration lists the Android repository's archived-release DOI as [10.5281/zenodo.22850342](https://doi.org/10.5281/zenodo.22850342). The manuscript uses this identifier for Android v1.0.1; the corresponding all-versions (concept) DOI is [10.5281/zenodo.22850341](https://doi.org/10.5281/zenodo.22850341). These identifiers follow the current integration badge and the version-specific citation shown in `CITATION.cff`.
+
+**Release-note erratum (documentation only):** the explanatory text of the existing GitHub v1.0.1 release reverses the labels “version DOI” and “concept DOI”. This README records the corrected labels without changing the tagged release, associated artifacts, scientific Core or published app. The Zenodo record itself should remain the authoritative metadata source. DOI registration or public availability is not evidence of clinical validation or medical-device certification.
